@@ -76,7 +76,7 @@ class InternalAPI(object):
             build_url(url, includes=includes, fields=fields)
         )        
 
-    def get_conversations(self, page_size=20, cursor=None, includes=None, fields=None):
+    def get_conversations(self, page_size=20, cursor=None, includes=None, fields=None, filters=None):
         url = 'conversations'
         params = {'page[count]': page_size}
         if cursor:
@@ -87,7 +87,7 @@ class InternalAPI(object):
             params.update({'page[cursor]': cursor})
         url += "?" + urlencode(params)
         return self.__get_jsonapi_doc(
-            build_url(url, includes=includes, fields=fields)
+            build_url(url, includes=includes, fields=fields, filters=filters)
         )
         
     def get_current_user(self, includes=None, fields=None):
