@@ -6,7 +6,7 @@ def joined_or_null(arr):
     return "null" if len(arr) == 0 else ','.join(arr)
 
 
-def build_url(path, includes=None, fields=None):
+def build_url(path, includes=None, fields=None, filters=None):
     connector = '&' if '?' in path else '?'
     params = {}
 
@@ -22,6 +22,15 @@ def build_url(path, includes=None, fields=None):
             }
         )
 
+    if filters:
+        params.update(
+            {
+                "filter[{resource_type}]".format(resource_type=resource_type):
+                attributes
+                for resource_type, attributes in filters.items()
+            }
+        )    
+        
     if not params:
         return path
 

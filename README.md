@@ -5,6 +5,10 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/patreon.svg?style=flat)](http://pypi.python.org/pypi/patreon)
 [![Build Status](https://img.shields.io/circleci/project/github/patreon/patreon-python.svg)](https://circleci.com/gh/Patreon/patreon-python/)
 
+Note: This version has support for the unstable internal API that offers additional functionality that is currently not implemented in API v2.
+Documentation for these additional features to come. Test suite files may or may not ever be implemented for this fork.
+---
+
 Interact with the Patreon API via OAuth.
 
 Get the egg from [PyPI](https://pypi.python.org/pypi/patreon), typically via `pip`:
