@@ -6,7 +6,9 @@
 [![Build Status](https://img.shields.io/circleci/project/github/patreon/patreon-python.svg)](https://circleci.com/gh/Patreon/patreon-python/)
 
 Note: This version has support for the unstable internal API that offers additional functionality that is currently not implemented in API v2.
-Documentation for these additional features to come. Test suite files may or may not ever be implemented for this fork.
+---
+Documentation for these additional features to come. Test suite files may or may not ever be implemented for this fork. cloudscraper is required for the Internal API.
+
 ---
 
 Interact with the Patreon API via OAuth.
